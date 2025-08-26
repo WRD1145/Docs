@@ -5,6 +5,7 @@ import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-p
 export default defineConfig({
   title: "WRD1145的文档",
   description: "Hi,欢迎来到我的文档",
+  base: '/Docs/',
   head: [
       // 添加图标
       ['link', { rel: 'icon', href: '/favicon.ico' }]
