@@ -69,15 +69,15 @@ jobs:
           # 部署目标目录
           TARGET: ${{ secrets.DEPLOY_WEB_TARGET }}
 
-      #- name: 提交 IndexNow
-        #uses: bojieyang/indexnow-action@v1
-        #with:
-          #sitemap-location: "https://docs.classisland.tech/sitemap.xml"  # change it
-          #endpoint: "www.bing.com"
-          #since: 1
+      - name: 提交 IndexNow
+        uses: bojieyang/indexnow-action@v1
+        with:
+          sitemap-location: "https://docs.wrd1145.dev/sitemap.xml"  # change it
+          endpoint: "www.bing.com"
+          since: 1
           # minite, hour, day, week, month, year
-          #since-unit: "day"
-          #limit: 100
-          #key: ${{ secrets.INDEXNOW_KEY }}
-          #key-location: ${{ secrets.INDEXNOW_KEY_LOCATION }}
+          since-unit: "day"
+          limit: 100
+          key: ${{ secrets.INDEXNOW_KEY }}
+          key-location: ${{ secrets.INDEXNOW_KEY_LOCATION }}
   
