@@ -22,8 +22,9 @@ export const zhSidebar = sidebar({
       text: "社区",
       children: [
         "README.md",
-        "AiBot.md",
-        "question.md"
+        "aibot.md",
+        "question.md",
+        "contributing.md"
       ],
     },
   ],
