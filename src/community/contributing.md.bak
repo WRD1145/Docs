@@ -2,7 +2,9 @@
 icon: code-commit
 ---
 
-# 贡献
+# 向 文档 贡献
+:::
+
 感谢您为本文档做出贡献！
 
 本文档基于 [VuePress](https://vuepress.vuejs.org/) 搭建。了解 [VuePress](https://vuepress.vuejs.org/) 的用法对编写本文档很有帮助。
