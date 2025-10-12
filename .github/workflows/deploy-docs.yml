@@ -19,7 +19,7 @@ jobs:
       group: "web-deploy"
       cancel-in-progress: false
     environment:
-      name: classisland-web
+      name: wrd1145-web
     name: "Build & Deploy"
     runs-on: ubuntu-latest
     steps:
