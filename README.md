@@ -1,23 +1,25 @@
-# ClassIsland 文档
+# WRD1145 文档
 
-这是 [ClassIsland](https://github.com/HelloWRC/ClassIsland) 文档仓库。本文档基于 [VuePress](https://vuejs.press/) 搭建
+这是 WRD1145 文档仓库。本文档基于 [VuePress](https://vuejs.press/) 搭建
 
-[在线查看文档](https://classisland.github.io/classisland-docs-next/)
+本文档基于[Classisland文档](https://github.com/ClassIsland/classisland-docs-next)进行修改
+
 
 ## 开始编写文档
 
-1. 安装 Node 20 环境（推荐使用NVM）
+1. 安装 Node.js 20 环境（推荐使用NVM）
 2. 克隆并进入文档仓库
 3. 安装依赖（需要使用pnpm，可使用corepack安装）
    ```sh
    pnpm install
    ```
-
 4. 启动 VuePress 服务器
 
     ``` bash
     pnpm run docs:dev
     ```
+
+> 拓展：[pnpm安装文档](https://www.pnpm.cn/installation),[Node.js官网](https://nodejs.org/zh-cn)
 
 启动 VuePress 服务器后，在浏览器中打开终端输出的链接（默认是[http://localhost:8080/](http://localhost:8080/)）即可浏览文档。当本地文档做出更改时，浏览器中的文档将自动刷新。
 
@@ -29,14 +31,14 @@
 
 ## 做出贡献
 
-如果您有意愿为本文档做出贡献，请先阅读[贡献指南](https://docs.classisland.tech/community/contributing.html)。我们欢迎向本仓库提交 [Pull Request](https://github.com/ClassIsland/classisland-docs-next/pulls)。
+如果您有意愿为本文档做出贡献，请先阅读[贡献指南](https://docs.wrd1145.dev/community/contributing.html)。我们欢迎向本仓库提交 [Pull Request](https://github.com/WRD1145/Docs/pulls)。
 
 ## 致谢
 
-感谢以下为本文档做出贡献的同学：
+感谢以下贡献着：
 
-<a href="https://github.com/ClassIsland/classisland-docs-next/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ClassIsland/classisland-docs-next&max=1000" alt="贡献者名单"/>
+<a href="https://github.com/WRD1145/Docs/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=WRD1145/Docs&max=1000" alt="贡献者名单"/>
 </a>
 
 ## 许可证
