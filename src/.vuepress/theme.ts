@@ -5,6 +5,8 @@ import { enSidebar, zhSidebar } from "./sidebar/index.js";
 export default hopeTheme({
   hostname: "https://docs.wrd1145.dev",
 
+
+
   author: {
     name: "WRD1145",
     url: "https://wrd1145.dev",
