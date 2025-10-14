@@ -36,6 +36,10 @@ jobs:
           corepack prepare pnpm@9.9.0 --activate
           pnpm install --frozen-lockfile
 
+      - name: 注入 base 路径
+        run: |
+          sed -i '8i\  base: "/Docs/",' src/.vuepress/theme.ts
+
       - name: 构建文档
         env:
           NODE_OPTIONS: --max_old_space_size=8192
