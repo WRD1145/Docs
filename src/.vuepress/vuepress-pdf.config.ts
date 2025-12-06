@@ -4,7 +4,7 @@ import theme from "./theme.js";
 import { viteBundler } from '@vuepress/bundler-vite'
 
 export default defineUserConfig({
-  outFile: "ClassIsland-Docs.pdf",
+  outFile: "WRD1145-Docs.pdf",
   outDir: "pdf",
   pdfOptions: {
     format: "A4",
