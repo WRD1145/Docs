@@ -152,6 +152,14 @@ export default hopeTheme({
     components: {
       components: ["Badge", "VPCard"],
     },
+    
+    dynamicTitle: {
+      showIcon: "/favicon.ico",
+      showText: "(/≧▽≦/) 欢迎回来！",
+      hideIcon: "/favicon.ico",
+      hideText: "(●—●) 哎呀，别走啊！",
+      recoverTime: 2000,
+    },
 
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
     // pwa: {
