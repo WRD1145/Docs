@@ -1,17 +1,21 @@
-import { defineUserConfig, Plugin } from "vuepress";
+import { defineUserConfig } from "vuepress";
+import { viteBundler } from "@vuepress/bundler-vite";
 import theme from "./theme.js";
 
 export default defineUserConfig({
-  base: "/Docs/",
-
+  base: "/Docs/",  // 如果部署在 /Docs/ 子路径下
+  bundler: viteBundler(),
+  theme,
   locales: {
-    "/Docs/": {
+    "/": {
       lang: "zh-CN",
-      title: "WRD1145 文档",
-      description: "WRD1145 的文档",
+      title: "文档",
+      description: "文档站点",
+    },
+    "/en/": {
+      lang: "en-US",
+      title: "Docs",
+      description: "Documentation site",
     },
   },
-  theme
-  // 和 PWA 一起启用
-  // shouldPrefetch: false,
 });
