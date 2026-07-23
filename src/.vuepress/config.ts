@@ -3,7 +3,7 @@ import { viteBundler } from "@vuepress/bundler-vite";
 import theme from "./theme.js";
 
 export default defineUserConfig({
-  base: "/",  // 如果部署在 /Docs/ 子路径下
+  base: "/Docs/",  // 如果部署在 /Docs/ 子路径下
   bundler: viteBundler(),
   theme,
   locales: {
