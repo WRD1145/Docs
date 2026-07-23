@@ -3,7 +3,7 @@ import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://wrd1145.github.io/Docs",
+  hostname: "https://docs.wrd1145.top",
 
 
 
@@ -14,7 +14,7 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "https://wrd1145.github.io/Docs/logo.png",
+  logo: "https://docs.wrd1145.top/logo.png",
 
   repo: "WRD1145/Docs",
 
