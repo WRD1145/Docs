@@ -2,7 +2,7 @@ import { defineUserConfig, Plugin } from "vuepress";
 import theme from "./theme.js";
 
 export default defineUserConfig({
-  base: "/",
+  base: "/Docs/",
 
   locales: {
     "/": {

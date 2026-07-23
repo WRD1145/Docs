@@ -1,54 +1,49 @@
-name: Github Page部署
+name: docs
 
 on:
+  # 每当 push 到 main 分支时触发部署
   push:
-    branches:
-      - main
-
-permissions:
-  contents: write
+    branches: [main]
+  # 手动触发部署
+  workflow_dispatch:
 
 jobs:
-  build:
+  docs:
     runs-on: ubuntu-latest
-    concurrency:
-      group: "web-deploy"
-      cancel-in-progress: false
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
+          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
       - name: 设置 pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1
 
       - name: 设置 Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          # 选择要使用的 node 版本
+          node-version: 22
+          # 缓存 pnpm 依赖
           cache: pnpm
 
       - name: 安装依赖
-        run: |
-          corepack prepare pnpm@9.9.0 --activate
-          pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
-      - name: 注入 base 路径
-        run: |
-          sed -i '8i\  base: "/Docs/",' src/.vuepress/theme.ts
+      # 运行构建脚本
+      - name: 构建 VuePress 站点
+        run: pnpm docs:build
 
-      - name: 构建文档
-        env:
-          NODE_OPTIONS: --max_old_space_size=8192
-        run: |
-          pnpm run docs:build
-
-      - name: 部署到当前仓库的 gh-pages 分支
-        uses: peaceiris/actions-gh-pages@v3
+      # 查看 workflow 的文档来获取更多信息
+      # @see https://github.com/crazy-max/ghaction-github-pages
+      - name: 部署到 GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./src/.vuepress/dist
-          publish_branch: gh-pages
+          # 部署到 gh-pages 分支
+          target_branch: gh-pages
+          # 部署目录为 VuePress 的默认输出目录
+          build_dir: docs/.vuepress/dist
+        env:
+          # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
