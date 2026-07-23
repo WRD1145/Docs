@@ -1,14 +1,14 @@
 import { sidebar } from "vuepress-theme-hope";
 
-export const zhSidebar = sidebar({
-  "/Docs/en-us": [
+export const enSidebar = sidebar({
+  "/en-us": [
     "",
     {
       text: "Home",
       link: "README.md",
     },
   ],
-  "/Docs/en-us/app/": [
+  "/en-us/app/": [
     {
       icon: "fa-solid fa-lightbulb",
       text: "Body",
@@ -17,7 +17,7 @@ export const zhSidebar = sidebar({
       ],
     },
   ],
-  "/Docs/en-us/community/": [
+  "/en-us/community/": [
     {
       text: "community",
       children: [
