@@ -5,7 +5,7 @@ export default defineUserConfig({
   base: "/Docs/",
 
   locales: {
-    "/": {
+    "/Docs/": {
       lang: "zh-CN",
       title: "WRD1145 文档",
       description: "WRD1145 的文档",
