@@ -3,18 +3,18 @@ import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://docs.wrd1145.dev",
+  hostname: "https://wrd1145.github.io/Docs",
 
 
 
   author: {
     name: "WRD1145",
-    url: "https://wrd1145.dev",
+    url: "https://wrd1145.top",
   },
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "https://docs.wrd1145.dev/logo.png",
+  logo: "https://wrd1145.github.io/Docs/logo.png",
 
   repo: "WRD1145/Docs",
 
@@ -32,7 +32,7 @@ export default hopeTheme({
   copyright: false,
 
   locales: {
-    "/": {
+    "/Docs/": {
       // navbar
       navbar: zhNavbar,
 
@@ -40,7 +40,7 @@ export default hopeTheme({
       sidebar: zhSidebar,
 
       //  autocorrect-disable
-      footer: "Copyright (c) 2025 WRD1145",
+      footer: "Copyright (c) 2026 WRD1145",
       //  autocorrect-enable
 
       displayFooter: true,
