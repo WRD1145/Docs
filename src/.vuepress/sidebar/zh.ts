@@ -23,7 +23,8 @@ export const zhSidebar = sidebar({
       children: [
         "README.md",
         "question.md",
-        "contributing.md"
+        "contributing.md",
+        "promotion.md"
       ],
     },
   ],
